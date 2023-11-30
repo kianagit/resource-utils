@@ -6,7 +6,11 @@
     "defaultRequire": 1
   },
   "client": [
-    "InventoryScreenMixins$MixinInventoryScreen",
-    "InventoryScreenMixins$MixinCreativeInventoryScreen"
+    "ScreenMixins$MixinCreativeInventoryScreen",
+    "ScreenMixins$MixinHandledScreen",
+    "ScreenMixins$MixinInventoryScreen"
+  ],
+  "mixins": [
+    "MixinMinecraftClient"
   ]
 }

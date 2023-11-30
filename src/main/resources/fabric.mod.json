@@ -10,6 +10,11 @@
   "license": "MIT",
   "icon": "assets/resourceutils/icon.png",
   "environment": "*",
+  "entrypoints": {
+    "client": [
+      "de.chloedev.resourceutils.ResourceUtilsClient"
+    ]
+  },
   "mixins": [
     "resourceutils.mixins.json"
   ],
