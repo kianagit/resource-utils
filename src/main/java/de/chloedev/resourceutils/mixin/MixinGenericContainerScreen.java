@@ -41,7 +41,7 @@ public abstract class MixinGenericContainerScreen extends HandledScreen<GenericC
     public void renderBottom(Args args) {
         if (rows == 3) {
             args.set(0, ResourceUtil.getVanillaIdentifier("textures/gui/container/generic_27.png"));
-            args.set(4, 71);
+            args.set(4, 72);
         }
     }
 }
