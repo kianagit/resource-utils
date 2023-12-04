@@ -29,19 +29,18 @@ public abstract class MixinGenericContainerScreen extends HandledScreen<GenericC
     public void renderTop(Args args) {
         if (rows == 3) {
             args.set(0, ResourceUtil.getVanillaIdentifier("textures/gui/container/generic_27.png"));
-            return;
-        }
-        // Mojang use "127", which causes the first pixel-line after the rows to be ignored when rendering. Possibly a typo? Possibly ignorance? idfk, but this fixes it.
-        if (rows == 6) {
-            args.set(4, 126);
         }
     }
+
 
     @ModifyArgs(method = "drawBackground", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/DrawContext;drawTexture(Lnet/minecraft/util/Identifier;IIIIII)V", ordinal = 1))
     public void renderBottom(Args args) {
         if (rows == 3) {
             args.set(0, ResourceUtil.getVanillaIdentifier("textures/gui/container/generic_27.png"));
             args.set(4, 72);
+        } else if (rows == 6) {
+            // Mojang use "126", which causes the first pixel-line after the rows to be ignored when rendering. Possibly a typo? Possibly ignorance? idfk, but this fixes it.
+            args.set(4, 126);
         }
     }
 }
