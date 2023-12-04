@@ -1,10 +1,18 @@
 package de.chloedev.resourceutils;
 
-import net.fabricmc.api.ClientModInitializer;
+public class ResourceUtilsClient {
 
-public class ResourceUtilsClient implements ClientModInitializer {
+    private static ResourceUtilsClient INSTANCE;
 
-    @Override
-    public void onInitializeClient() {
+    public void preInit() {
+
+    }
+
+    public void init() {
+    }
+
+    public static ResourceUtilsClient getInstance() {
+        if (INSTANCE == null) INSTANCE = new ResourceUtilsClient();
+        return INSTANCE;
     }
 }

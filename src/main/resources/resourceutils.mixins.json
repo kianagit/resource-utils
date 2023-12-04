@@ -11,6 +11,7 @@
     "ScreenMixins$MixinInventoryScreen"
   ],
   "mixins": [
-    "MixinMinecraftClient"
+    "MixinMinecraftClient",
+    "MixinText"
   ]
 }
